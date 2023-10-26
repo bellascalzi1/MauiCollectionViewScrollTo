@@ -13,11 +13,19 @@ namespace CollectionViewScrollTo
             BindingContext = _viewModel;
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private void ScrollToCountMinusOne(object sender, EventArgs e)
         {
             // Should scroll to 100 but scrolls to 99 instead! Removing the header in the CollectionView
             // fixes this though.
             CollectionView.ScrollTo(_viewModel.Items.Count - 1);
+        }
+        private void ScrollToCount(object sender, EventArgs e)
+        {
+            CollectionView.ScrollTo(_viewModel.Items.Count);
+        }
+        private void ScrollToIndexZero(object sender, EventArgs e)
+        {
+            CollectionView.ScrollTo(0);
         }
     }
 }

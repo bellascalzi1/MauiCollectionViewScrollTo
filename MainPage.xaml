@@ -10,10 +10,13 @@
                 <LinearItemsLayout Orientation="Vertical" />
             </CollectionView.ItemsLayout>
             <CollectionView.Header>
-                <Button Text="A Button inside a CollectionView header. Click me to scroll to bottom!" Clicked="Button_Clicked" />
+                <VerticalStackLayout>
+                    <Button Text="(header) Click me to scroll to index Count - 1!" Clicked="ScrollToCountMinusOne" />
+                    <Button Text="(header) Click me to scroll to index Count!" Clicked="ScrollToCount" />
+                </VerticalStackLayout>
             </CollectionView.Header>
             <CollectionView.Footer>
-                <Button Text="A Button inside a CollectionView Footer." />
+                <Button Text="(footer) Click me to scroll to index 0!" Clicked="ScrollToIndexZero" />
             </CollectionView.Footer>
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="{x:Type x:Int32}">
